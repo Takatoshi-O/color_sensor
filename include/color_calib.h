@@ -1,4 +1,8 @@
 #pragma once
+/**
+ * @file color_calib.h
+ * @brief カラーセンサーの色基準値と黒判定閾値をNVSから読み出して管理するキャリブレーションAPIを定義します。
+ */
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -12,8 +16,14 @@ extern "C" {
 /* NVS_MANAGER_COLOR_RGBC_COLOR_COUNT(=16)と一致させること。
  * 配列インデックスはcolor_sensor_color_id_tの値と対応する。
  */
+/** @brief キャリブレーションで管理する色数です。color_sensor_color_id_tの列挙値と対応します。 */
 #define COLOR_CALIB_COLOR_COUNT 16
 
+/**
+ * @brief 1色分の正規化済みRGB基準値です。
+ *
+ * 通常はR、G、Bの比率を表します。
+ */
 typedef struct {
     float r;
     float g;
@@ -42,7 +52,7 @@ esp_err_t color_calib_get_refs(uint8_t channel, color_calib_ref_t out[COLOR_CALI
  * @brief 指定チャンネルの黒判定用Clear閾値を取得する。
  *
  * NVSのCOLOR_SENSOR_COLOR_BLACKエントリのc値(生値)を返す。
- * NVSに未保存の場合はデフォルト閾値(12)を返す。
+ * NVSに未保存の場合はデフォルト閾値(30)を返す。
  *
  * @param channel チャンネル番号 = sensor_id
  * @return uint32_t 黒判定の閾値(この値未満のClearをCOLOR_SENSOR_COLOR_BLACKとみなす)
