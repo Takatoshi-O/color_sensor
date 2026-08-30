@@ -1,0 +1,4 @@
+version: "1.0.0"
+description: "PCA9548A I2Cマルチプレクサ経由で複数のTCS34725カラーセンサーを扱い、NVSキャリブレーションと色判定を行うコンポーネント"
+dependencies:
+  idf: ">=6.0.1"

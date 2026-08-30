@@ -1,0 +1,15 @@
+idf_component_register(
+    SRCS
+        "src/color_sensor_hw.c"
+        "src/color_calib.c"
+        "src/color_classify.c"
+    INCLUDE_DIRS 
+        "include"
+    PRIV_INCLUDE_DIRS
+        "."
+    REQUIRES 
+        esp_driver_i2c 
+        nvs_flash
+    PRIV_REQUIRES 
+        nvs_manager
+)
