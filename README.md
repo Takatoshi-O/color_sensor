@@ -35,7 +35,7 @@ Open `idf.py menuconfig` and select **Component config -> Color Sensor Configura
 | `COLOR_SENSOR_SCL_GPIO` | 6 | I2C SCL GPIO |
 | `COLOR_SENSOR_I2C_FREQ_HZ` | 100000 | I2C clock frequency |
 | `COLOR_SENSOR_PCA9548_ADDR` | 0x70 | PCA9548A address |
-| `COLOR_SENSOR_CHANNEL_COUNT` | 2 | Number of enabled channels (0..count-1) |
+| `COLOR_SENSOR_CHANNEL_COUNT` | 1 | Number of enabled channels (0..count-1) |
 
 ## Initialization
 

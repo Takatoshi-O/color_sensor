@@ -35,7 +35,7 @@ Kconfigでは現在、以下を設定できます。
 | `COLOR_SENSOR_SCL_GPIO` | 6 | I2C SCL GPIO |
 | `COLOR_SENSOR_I2C_FREQ_HZ` | 100000 | I2Cクロック周波数 |
 | `COLOR_SENSOR_PCA9548_ADDR` | 0x70 | PCA9548Aアドレス |
-| `COLOR_SENSOR_CHANNEL_COUNT` | 2 | 有効にするチャンネル数（0～count-1） |
+| `COLOR_SENSOR_CHANNEL_COUNT` | 1 | 有効にするチャンネル数（0～count-1） |
 
 ## 初期化
 
