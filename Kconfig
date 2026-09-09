@@ -26,7 +26,7 @@ menu "Color Sensor Configuration"
 
     config COLOR_SENSOR_CHANNEL_COUNT
         int "使用するセンサーチャンネル数"
-        default 2
+        default 1
         range 1 8
         help
             初期化時にループする、PCA9548Aの使用チャンネル数(0chから連番)。

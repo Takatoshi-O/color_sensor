@@ -104,7 +104,7 @@ bool color_sensor_hw_init(void)
             continue;
         }
 
-        esp_err_t e1 = write_reg(REG_ATIME, 0xFF);
+        esp_err_t e1 = write_reg(REG_ATIME, 0xFE);
         esp_err_t e2 = write_reg(REG_CONTROL, 0x02);
         esp_err_t e3 = write_reg(REG_ENABLE, ENABLE_PON);
         vTaskDelay(pdMS_TO_TICKS(3));
